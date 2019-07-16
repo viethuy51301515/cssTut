@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.parent{
+    height: 250px;
+    width: 200px;
+    margin-left: 20%;
+    perspective: 600px;
+}
+.child{
+    border: 1px solid black;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+    align-items: center;
+    height: 250px;
+    width: 200px;
+    position: absolute;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+}
+.child img{
+    height: 80%;
+    width: 100%;
+
+}
+.front{
+
+}
+.back{
+    transform: rotateY(180deg);
+}
+.card:hover{
+    transform: translateX(-100%) rotateY(-180deg)
+}
+.card{
+    transition: transform 1s;
+    position: relative;
+    height: 100%;
+    width:100%;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+}
+
